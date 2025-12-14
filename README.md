@@ -1,70 +1,102 @@
-# Getting Started with Create React App
+# 🎨 Sweet Shop Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Sweet Shop Frontend is a React-based web application that provides the user interface for the Sweet Shop Management System. It connects to the FastAPI backend to enable authentication, role-based access, browsing sweets, filtering, and purchasing.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+- User authentication with backend API (JWT-based)  
+- Role-based UI (Admin / User)  
+- Admin dashboard to add, update, and delete sweets  
+- User interface to view, filter, and purchase sweets  
+- Real-time stock updates (purchase disabled when quantity = 0)  
+- Filtering options by category, price range, and availability  
+- Responsive design for desktop and mobile  
+- Testing setup with React Testing Library and Jest  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🧰 Tech Stack
 
-### `npm test`
+- React (v19+) – core library for building the UI  
+- React DOM – rendering components to the browser  
+- React Scripts (CRA) – development and build configuration  
+- Testing Library (React, DOM, Jest, User Event) – for writing and running tests  
+- Web Vitals – performance monitoring and optimization  
+- CSS / Material-UI – styling and responsive design  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 📂 Project Structure
+```text
+sweet-shop-frontend/
+│
+├── public/              
+├── src/
+│   ├── components/      
+│   ├── pages/           
+│   ├── services/        
+│   ├── App.js           
+│   ├── index.js        
+│   └── styles/          
+├── package.json
+├── README.md
+└── node_modules/
+```
+## ▶️ Setup & Usage
+Prerequisites
+- Node.js (v16+ recommended)
+- npm or yarn
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation
+- Install dependencies
+```
+npm install
+```
+## Run in development
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+npm start
+```
+- App runs at: http://localhost:3000
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Connects to backend API at: http://127.0.0.1:8000
 
-### `npm run eject`
+## Build for production
+```bash
+npm run build
+```
+- Optimized build will be created in the build/ folder.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Testing
+```bash
+npm test
+```
+- Runs tests in watch mode using React Testing Library and Jest.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🔗 Backend Integration
+This frontend communicates with the Sweet Shop Backend (FastAPI).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Backend repo:https://github.com/Thakur027/sweet-shop-backend
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- API base URL: http://127.0.0.1:8000
 
-## Learn More
+Ensure backend is running before starting the frontend.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📌 Notes
+- CORS enabled: Backend allows requests from frontend domain.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Environment variables: Configure API base URL in .env file if needed.
 
-### Code Splitting
+- Role-based UI: Admin routes and components are protected.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Stock logic: Purchase button disabled when quantity reaches zero.
 
-### Analyzing the Bundle Size
+## 👨‍💻 Author
+- Name: Shinoy Thakur
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- GitHub: Thakur027
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
